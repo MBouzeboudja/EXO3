@@ -1,20 +1,20 @@
 using System.Collections.Generic;
-using ToDo;
 namespace ToDo
 {
     public class ToDoList{
-        List<ToDo> items {get;}
+        public List<ToDoItem> items {get;}
 
         public ToDoList(){
-            this.items = new List<ToDo>();
+            this.items = new List<ToDoItem>();
         }
-        public ToDoList addItem(ToDo item){
+        
+        public ToDoList addItem(ToDoItem item){
             this.items.Add(item);
             return this;
         }
 
-        public ToDoList markDoneItem(ToDo item){
-           ToDo searchedItem = this.items.Find(i => i.Equals(item));
+        public ToDoList markDoneItem(ToDoItem item){
+           ToDoItem searchedItem = this.items.Find(i => i.Equals(item));
            searchedItem.MarkDone();
            return this;
         }

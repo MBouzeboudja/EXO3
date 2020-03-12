@@ -14,27 +14,27 @@ namespace ToDo
         ToDoList GetToDoList();
     }
 
-    public class ToDoService : IToDoService
+    public class ToDoListService : IToDoService
     {
 
         public ToDoList toDoList {get;}
 
-        public ToDoService(ToDoList toDoList){
+        public ToDoListService(ToDoList toDoList){
             this.toDoList = toDoList;
         }
 
-        public ToDoList addTodoItem(ToDo item)
+        public ToDoList addTodoItem(ToDoItem item)
         {
             this.toDoList.addItem(item);
             return this.toDoList;
         }
 
-        public ToDoList markToDoItemDone(ToDo item)
+        public ToDoList markToDoItemDone(ToDoItem item)
         {
-           ToDo item = this.toDoList.item
+          return this.toDoList.markDoneItem(item);    
         }
 
-        public ToDoList removeToDoItem(ToDo item)
+        public ToDoList removeToDoItem(ToDoItem item)
         {
             throw new System.NotImplementedException();
         }

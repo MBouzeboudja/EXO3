@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\exo3.Core\exo3.Core.csproj" />
+    <ProjectReference Include="..\exo3.App\exo3.App.csproj" />
+
   </ItemGroup>
 
 </Project>
